@@ -1,7 +1,7 @@
 from relationship_app.models import Library, Librarian, Author, Book
 
 
-library = Library.objects.create(name="Novels")
+library_name = Library.objects.create(name="Novels")
 library.save()
 
 librarian = Librarian.objects.create(name="Baning Adjei", library="Novels")
@@ -29,4 +29,4 @@ for book in books:
 
 booksByAuthor = Book.objects.filter(author="Charles Duhigg")
 
-librarian = Librarian.objects.filter(library="Novels")
+librarian = Librarian.objects.filter(library=library_name)

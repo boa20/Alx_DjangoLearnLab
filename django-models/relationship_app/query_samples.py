@@ -8,7 +8,7 @@ from relationship_app.models import Library, Librarian, Author, Book
 
 
 library_name = Library.objects.create(name="Novels")
-library.save()
+library_name.save()
 
 librarian = Librarian.objects.create(name="Baning Adjei", library="Novels")
 librarian.save()
